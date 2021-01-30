@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
+//componets
+import Table from './components/Table'
+import StickyTable from './components/StickyTable'
+import SpanTable from './components/SpanTable'
+import CustomizedTable from './components/CustomizedTable'
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>일반 테이블</h1>
+      <Table />
+      <h1>Sticky 속성을 이용한 Header 고정 테이블</h1>
+      <StickyTable />
+      <h1>Span 속성으로 Header 두 개 테이블 </h1>
+      <SpanTable />
+      <h1>Header 두 개 고정 테이블</h1>
+      <CustomizedTable />
     </div>
   );
-}
+};
 
 export default App;
